@@ -3,11 +3,21 @@
     <field name="MODE">UNTIL</field>
     <value name="NUMBER">
       <block type="sensor_button" id="98">
-        <field name="OBJECT">ENTER</field>
+        <field name="OBJECT">DOWN</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_forward" id="108">
+      <block type="movement_setmotors" id="127" inline="true">
+        <value name="BOTHMOVLEFT">
+          <block type="math_number" id="128">
+            <field name="NUM">100</field>
+          </block>
+        </value>
+        <value name="BOTHMOVRIGHT">
+          <block type="math_number" id="129">
+            <field name="NUM">100</field>
+          </block>
+        </value>
         <next>
           <block type="robot_delay" id="110" inline="true">
             <value name="DELAY">
